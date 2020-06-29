@@ -23,8 +23,12 @@ This README would normally document whatever steps are necessary to get your app
 ### Contribution guidelines ###
 
 * Create a branch out of master branch
-* Code review and merge into master
-* Checkout master and test
+* Code and do manual test on the branch for both new and existing feature
+* Code review
+* [Address review comments]
+* merge into master
+* Checkout from master
+* Do end to end testing on newly intoduced features and existing once
 * Delete the working branch you created
 
 ### Who do I talk to? ###
