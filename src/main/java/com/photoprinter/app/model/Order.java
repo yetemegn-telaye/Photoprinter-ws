@@ -20,7 +20,7 @@ import java.time.LocalTime;
 import java.time.LocalDateTime;
 import com.google.gson.Gson;
 
-@Entity
+@Entity(name = "PrintOrder")
 public class Order {
 	
 	@Id
