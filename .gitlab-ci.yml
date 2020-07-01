@@ -8,7 +8,7 @@ cache:
 build:
   stage: dependency
   script:
-    - mvn clean install
+    - mvn clean install -DskipTests
 
 build:
   stage: build
@@ -23,6 +23,6 @@ test:
 deploy:
   stage: deploy
   script:
-    - mvn $MAVEN_CLI_OPTS deploy
+    - mvn deploy
   only:
     - master
