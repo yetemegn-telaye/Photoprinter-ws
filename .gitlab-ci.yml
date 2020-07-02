@@ -20,8 +20,8 @@ test:
   script:
     - mvn test
 
-deploy:
-  stage: deploy
+# deploy:
+#   stage: deploy
 #   script:
 #     - mvn deploy
 #   only:
