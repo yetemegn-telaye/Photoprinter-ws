@@ -22,7 +22,7 @@ test:
 
 deploy:
   stage: deploy
-  script:
-    - mvn deploy
-  only:
-    - master
+#   script:
+#     - mvn deploy
+#   only:
+#     - master
