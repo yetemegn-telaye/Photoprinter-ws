@@ -16,15 +16,16 @@ public class OrderDto {
 	private String orderId;
 
 
-	private Orderstatus status;
+	private Orderstatus orderStatus;
 
 	private Set<ImageinfoDto> imageInfos;
 
-	private LocalDate date;
+	private LocalDate orderDate;
 
 	private ShopDto shop;
 
 	private ClientDto client;
+	
 
 	
 	public void setOrderId(String orderId) {
@@ -35,14 +36,7 @@ public class OrderDto {
 		return this.orderId;
 	}
 	
-		public void setStatus(Orderstatus status) {
-		this.status = status;
-	}
-
 	
-	public Orderstatus getStatus() {
-		return this.status;
-	}
 	
 	public void setImageInfos(Set<ImageinfoDto> imageInfos) {
 		this.imageInfos = imageInfos;
@@ -53,13 +47,21 @@ public class OrderDto {
 		return this.imageInfos;
 	}
 	
-	public void setDate(LocalDate date) {
-		this.date = date;
+
+	public Orderstatus getOrderStatus() {
+		return orderStatus;
 	}
 
-	
-	public LocalDate getDate() {
-		return this.date;
+	public void setOrderStatus(Orderstatus orderStatus) {
+		this.orderStatus = orderStatus;
+	}
+
+	public LocalDate getOrderDate() {
+		return orderDate;
+	}
+
+	public void setOrderDate(LocalDate orderDate) {
+		this.orderDate = orderDate;
 	}
 
 	public ShopDto getShop() {

@@ -1,3 +1,4 @@
 /target/
 /.idea/
 /photoprinter-ws.iml
+/src/main/resources/application.properties

@@ -29,14 +29,14 @@ public class Order {
 	private String orderId;
 	
 	
-	private Orderstatus status;
+	private Orderstatus orderStatus;
 
 	
 	@OneToMany(mappedBy="order", cascade = CascadeType.ALL)
 	private Set<Imageinfo> imageInfos;
 
 	
-	private LocalDate date;
+	private LocalDate orderDate;
 
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "ShopId")
@@ -57,15 +57,15 @@ public class Order {
 		return this.orderId;
 	}
 	
-		public void setStatus(Orderstatus status) {
-		this.status = status;
+
+	public Orderstatus getOrderStatus() {
+		return orderStatus;
 	}
 
-	
-	public Orderstatus getStatus() {
-		return this.status;
+	public void setOrderStatus(Orderstatus orderStatus) {
+		this.orderStatus = orderStatus;
 	}
-	
+
 	public void setImageInfos(Set<Imageinfo> imageInfos) {
 		this.imageInfos = imageInfos;
 	}
@@ -75,13 +75,14 @@ public class Order {
 		return this.imageInfos;
 	}
 	
-	public void setDate(LocalDate date) {
-		this.date = date;
+	
+
+	public LocalDate getOrderDate() {
+		return orderDate;
 	}
 
-	
-	public LocalDate getDate() {
-		return this.date;
+	public void setOrderDate(LocalDate orderDate) {
+		this.orderDate = orderDate;
 	}
 
 	public Shop getShop() {
