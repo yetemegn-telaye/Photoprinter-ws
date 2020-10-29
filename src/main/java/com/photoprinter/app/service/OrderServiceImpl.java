@@ -51,11 +51,11 @@ public class OrderServiceImpl implements OrderService {
 		if(currentOrder == null)
 			throw new ServiceException(new ResourceNotFoundException(Order.class));
 				
-		currentOrder.setStatus(orderDto.getStatus());
+		currentOrder.setOrderStatus(orderDto.getOrderStatus());
 		java.lang.reflect.Type ImageInfosSet  = new TypeToken<Set<Imageinfo>>() {}.getType();	
 		currentOrder.setImageInfos(modelMapper.map(orderDto.getImageInfos(), ImageInfosSet));
 		
-		currentOrder.setDate(orderDto.getDate());
+		currentOrder.setOrderDate(orderDto.getOrderDate());
 
 		Order savedOrder = orderRepository.save(currentOrder);
 		if(savedOrder == null)
